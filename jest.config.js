@@ -1,7 +1,9 @@
-/** @type {import('ts-jest').JestConfigWithTsJest} **/
+const jestExpoPreset = require('jest-expo/jest-preset');
+
 module.exports = {
-  testEnvironment: "node",
-  transform: {
-    "^.+\.tsx?$": ["ts-jest",{}],
-  },
+  ...jestExpoPreset,
+  modulePathIgnorePatterns: [
+    '/node_modules/',
+    ...jestExpoPreset.transformIgnorePatterns
+  ],
 };

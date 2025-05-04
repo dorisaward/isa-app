@@ -6,6 +6,7 @@ import { RootStackParamList } from '@/types/RootStackParamList'
 import { theme } from '@/theme/theme'
 import { createServer } from "miragejs"
 import { serverConfig } from '@/mockBackend/serverConfig'
+import { Funds } from '@/screens/funds'
 
 declare const window: {
   server: ReturnType<typeof createServer>
@@ -36,6 +37,7 @@ export default function RootLayout() {
       }}>
         <Stack.Screen name="Login" component={Login} options={{ headerBackVisible: false, gestureEnabled: false }}/>
         <Stack.Screen name="Home" component={Index} options={{ headerBackVisible: false, gestureEnabled: false }}/>
+        <Stack.Screen name="FundsList" component={Funds}/>
       </Stack.Navigator>
     </SafeAreaView>
   )

@@ -37,7 +37,7 @@ export default function RootLayout() {
       }}>
         <Stack.Screen name="Login" component={Login} options={{ headerBackVisible: false, gestureEnabled: false }}/>
         <Stack.Screen name="Home" component={Index} options={{ headerBackVisible: false, gestureEnabled: false }}/>
-        <Stack.Screen name="FundsList" component={Funds}/>
+        <Stack.Screen name="FundsList" component={Funds} options={{ title: 'List of available funds' }}/>
       </Stack.Navigator>
     </SafeAreaView>
   )

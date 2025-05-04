@@ -22,7 +22,8 @@ describe('FundsList', () => {
     const { getByText } = render(renderable)
 
     // Then
-    expect(getByText(testFunds[0].name, { exact: false })).toBeTruthy()
+    expect(getByText(testFunds[0].description)).toBeTruthy()
+    expect(getByText('Select ' + testFunds[0].name)).toBeTruthy()
   })
   it('should render error message, given null', () => {
     // Given

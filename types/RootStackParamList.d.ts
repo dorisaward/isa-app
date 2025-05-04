@@ -1,5 +1,5 @@
 export type RootStackParamList = {
-  Home: undefined
+  Home: { selectedFund: Fund } | undefined
   Login: undefined
   FundsList: undefined
 }

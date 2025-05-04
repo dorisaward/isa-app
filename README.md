@@ -1,6 +1,4 @@
-# Welcome to your Expo app 👋
-
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Cushon Isa App
 
 ## Get started
 
@@ -13,38 +11,52 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 2. Start the app
 
    ```bash
-   npx expo start
+   npm run start
    ```
 
-In the output, you'll find options to open the app in a
+3. Download the expo go app on ios or android and scan the QR code
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Completed
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Bare-bones app with fake server for QA purposes from which to get a list of ISA funds
+- Login page, no login functionality
+- Navigation to and from home page
+- Back functionality disabled to ensure user cannot navigate to login page without logging out
+- List of funds screen (navigation back to home not disabled) complete with loading and error handling
+- Can tap button to select fund and navigate back to the home page
+- Home page now displays selected fund
+- Minimal QA on ios (iPhone 11) & android (Galaxy Fold 3). No QA on web
+- Some unit tests
+- Some theming
 
-## Get a fresh project
+## To Do
+(order of below to be confirmed after conversations with Product Owners)
 
-When you're ready, run:
+- Tests
+  - Unit tests for every screen, navigation, etc.
+  - GitHub action to run tests on push (or other CI)
 
-```bash
-npm run reset-project
-```
+- A11y
+  - Ensure theming WCAG AA compliant at minimum
+  - QA with voiceover & talkback
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Security
+  - Real log in/log out functionality
+  - Persisted storage for offline functionality
+  - Permission check implementation to get ISA fund list
 
-## Learn more
+- Connect to real server based on permissions
+  - Get real ISA options
+  - Post fund details
+  - Get details
 
-To learn more about developing your project with Expo, look at the following resources:
+- Offline mode
+  - Save above locally
+  - Render information when not connected to the internet or server has problems
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Error handling
+  - Replace console.error with better error handling
+  - Error tracking, e.g. sentry?
+  - Analytics?
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- App distribution
